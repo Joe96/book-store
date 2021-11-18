@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment } = require('../../models');
+const {Comment} = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //route is /api/comments/
@@ -24,7 +24,7 @@ router.put('/:id', withAuth, async (req, res) => {
         },
       });
       console.log(req.body);
-    console.log('********** '+ updatedComment + " updated comment");
+    console.log('********** '+ updatedComment + "updated comment");
     if (updatedComment >0) {
       res.status(200).end();
     } else {
